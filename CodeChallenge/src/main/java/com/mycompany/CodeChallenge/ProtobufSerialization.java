@@ -22,9 +22,4 @@ public class ProtobufSerialization
         String json = printer.print(fc);
         return json;
 	}
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-     
-    }
 }
