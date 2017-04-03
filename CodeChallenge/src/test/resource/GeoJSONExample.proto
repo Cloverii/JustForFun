@@ -1,0 +1,22 @@
+syntax = "proto3";
+import "google/protobuf/struct.proto";
+
+message FeatureCollection {
+    string type = 1;
+    repeated Features features = 2;
+
+    message Features {
+        string type = 1;
+        Geometry geometry = 2;
+        Properties properties = 3;
+
+        message Geometry {
+            string type = 1;
+            google.protobuf.ListValue coordinates = 2;
+        }
+
+        message Properties {
+            string name = 1;
+        }
+    }
+}
